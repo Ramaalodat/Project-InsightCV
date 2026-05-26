@@ -1,0 +1,105 @@
+.cta-company {
+  position: relative;
+}
+
+.cta-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.cta-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  animation: cardFloat 8s ease-in-out infinite;
+}
+
+.cta-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (min-width: 768px) {
+  .cta-card {
+    padding: 3rem;
+  }
+}
+
+.cta-glow {
+  position: absolute;
+  inset: -3rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.cta-inner {
+  position: relative;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 1.875rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+
+.cta-btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.cta-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 215, 0, 0.7);
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+
+.cta-btn-secondary:hover {
+  color: black;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  transform: scale(1.05);
+}

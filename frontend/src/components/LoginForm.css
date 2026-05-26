@@ -1,0 +1,529 @@
+/* الألوان الأساسية */
+:root {
+    --neon-blue: #00aaff;
+    --neon-yellow: #ffdd00;
+    --dark-bg: #1c1c1c;
+    --light-bg: #2d2d39;
+}
+
+/* Global body styles - no background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Global html styles - no background image */
+html {
+    height: 100%;
+}
+
+/* Login page container with om.jpg background */
+.login-page {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('/om.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container for login form and back arrow */
+.login-container {
+    position: absolute;
+    right: 55%; /* 480px على شاشة 1536px = 31.25% */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: transparent;
+    /* منع التأثر بالزوم */
+    zoom: reset;
+}
+
+/* ------------------ الحاوية الأساسية والحركة التمددية ------------------ */
+
+.form-wrapper {
+    position: relative;
+    width: 390px;
+    height: 60px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    
+    /* Pixel-perfect border pattern from image */
+    border: 6px solid #444;
+    box-shadow: 
+        0 0 6px var(--neon-pink),
+        0 0 6px var(--neon-blue),
+        inset 0 0 10px rgba(0, 0, 0, 0.3);
+    
+    /* الحدود النيون المزخرفة */
+    position: relative;
+    overflow: hidden;
+}
+
+/* الخط الأزرق العلوي */
+.form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--neon-yellow), transparent);
+    box-shadow: 0 0 10px var(--neon-yellow);
+    border-radius: 8px 8px 0 0;
+    z-index: 2;
+}
+
+/* الخط الأصفر السفلي */
+.form-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, transparent, var(--neon-blue));
+    box-shadow: 0 0 10px var(--neon-blue);
+    border-radius: 0 0 8px 8px;
+    z-index: 2;
+}
+
+/* تأثير hover إضافي */
+.form-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 20px var(--neon-blue), 
+        0 0 20px var(--neon-yellow), 
+        0 0 30px rgba(0, 170, 255, 0.616), 
+        0 0 30px rgba(248, 215, 3, 0.664),
+        0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.form-wrapper.expanded {
+    width: 400px;
+    height: 470px;
+    
+    /* Pixel-perfect border pattern when expanded */
+    border: 6px solid #444;
+    box-shadow: 
+        0 0 3px var(--neon-pink),
+        0 0 3px var(--neon-blue),
+        inset 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+}
+
+/* الخط الأزرق العلوي عندما يكون مفتوح */
+.form-wrapper.expanded::before {
+    background: linear-gradient(to right, var(--neon-blue), transparent);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* الخط الأصفر السفلي عندما يكون مفتوح */
+.form-wrapper.expanded::after {
+    background: linear-gradient(to right, transparent, var(--neon-yellow));
+    box-shadow: 0 0 15px var(--neon-yellow);
+}
+
+.form-wrapper.expanded:hover {
+    box-shadow: 
+        0 0 30px var(--neon-blue),
+        0 0 30px var(--neon-yellow),
+        inset 0 0 20px rgba(4, 169, 252, 0.423);
+}
+
+/* ------------------ الحركة الدورانية (الحدود) ------------------ */
+
+/* الخطوط الدورانية حول الزر */
+.form-wrapper::before,
+.form-wrapper::after {
+    content: '';
+    position: absolute;
+    z-index: 1; /* للتأكد من أنها فوق الخلفية لكن تحت المحتوى */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/* الدوران والتوهج (باستخدام filter: drop-shadow) */
+.form-wrapper::before {
+    background: transparent;
+    border: 3px solid var(--neon-pink);
+    /* تدوير بزاوية 360 درجة بشكل مستمر */
+    animation: rotate-border 4s linear infinite;
+    /* الظل الساقط يضيف تأثير التوهج */
+    filter: drop-shadow(0 0 10px var(--neon-pink));
+}
+
+.form-wrapper.expanded::before {
+    border-color: var(--neon-blue);
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+}
+
+
+@keyframes rotate-border {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ------------------ أيقونة القلب ------------------ */
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: var(--neon-pink);
+    transform: rotate(-45deg);
+    z-index: 5;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.heart-icon::before,
+.heart-icon::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background: var(--neon-pink);
+    border-radius: 20px 20px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 20px;
+}
+
+.heart-icon::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 20px 20px;
+}
+
+.form-wrapper.expanded .heart-icon {
+    background: var(--neon-blue);
+}
+
+.form-wrapper.expanded .heart-icon::before,
+.form-wrapper.expanded .heart-icon::after {
+    background: var(--neon-blue);
+}
+
+/* ------------------ المنطقة الداخلية السوداء ------------------ */
+
+.inner-container {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    background: #1e1e1e;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* التوهج الداخلي والحدود الخفيفة (لإحداث عمق) */
+    box-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.8) inset, /* ظل داخلي قوي للعمق */
+        0 1px 0 rgba(255, 255, 255, 0.05) inset, /* خط إضاءة علوي داخلي */
+        0 -1px 0 rgba(0, 0, 0, 0.5) inset; /* خط ظل سفلي داخلي */
+    z-index: 2;
+}
+
+/* ------------------ محتوى النموذج ------------------ */
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 5;
+    transition: all 0.6s ease-in-out;
+}
+
+/* إيموجي الدخول والقلوب البسيط */
+/* emojis removed */
+
+.login-title {
+    color: #eef7ff; /* bluish-white */
+    font-size: 1.08em;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+    transition: all 0.3s ease;
+    /* soft icy-blue glow */
+   text-shadow: 0 0 10px #0040ff, 0 0 20px rgba(0, 132, 255, 0.8);
+}
+
+.form-wrapper.expanded .login-header {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* تأثيرات الإيموجي عند التوسع 
+.form-wrapper.expanded .login-emoji {
+    filter: drop-shadow(0 0 6px var(--neon-blue));
+}
+
+.form-wrapper.expanded .heart-emoji {
+    filter: drop-shadow(0 0 6px var(--neon-blue));
+}*/
+
+.form-wrapper.expanded .login-title { text-shadow: 0 10px 30px rgba(26, 121, 222, 0.862), 0 2px 8px rgba(34, 129, 232, 0.747); }
+
+
+/* Form content - pixel-perfect layout from image */
+.form-content {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    width: 92%;
+    max-width: 380px;
+    transition: opacity 0.4s ease 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 8px 0;
+    z-index: 10;
+}
+
+.form-wrapper.expanded .form-content {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ------------------ حقول الإدخال والأزرار ------------------ */
+
+.neon-input {
+    background: rgba(45, 45, 57, 0.95);
+    border: 1px solid #ccc;
+    color: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Radio group for signup */
+.radio-group {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 4px;
+    box-sizing: border-box;
+}
+
+.radio-label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #ddd;
+    font-size: 14px;
+    background: rgba(255,255,255,0.02);
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.radio-input {
+        width: 18px;
+        height: 18px;
+        accent-color: #ffd400; /* modern browsers */
+}
+
+/* Responsive: stack radio labels on small screens */
+@media (max-width: 420px) {
+    .radio-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .radio-label { justify-content: flex-start; }
+}
+
+.neon-input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.neon-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: rgba(45, 45, 57, 1);
+}
+
+.initial-button {
+    position: absolute;
+    background: transparent;
+    color: transparent;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: none;
+}
+
+.sign-in-button {
+    background-color: var(--neon-yellow);
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(255, 221, 0, 0.4);
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sign-in-button:hover {
+    background-color: #ffed4e;
+    box-shadow: 0 4px 14px rgba(255, 221, 0, 0.6);
+    transform: translateY(-1px);
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.forgot-link {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.sign-up-link {
+    color: #eef7ff; /* bluish-white */
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-shadow: 0 8px 24px rgba(0, 114, 235, 0.86), 0 1px 4px rgba(12, 97, 188, 0.855);
+}
+
+.forgot-link:hover {
+    color: #fff;
+}
+
+.sign-up-link:hover { color: #ffffff; text-shadow: 0 14px 44px rgba(23, 114, 212, 0.826); }
+
+/* ------------------ سهم العودة ------------------ */
+
+.back-arrow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid var(--neon-pink);
+    color: var(--neon-pink);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--neon-pink);
+    z-index: 100;
+}
+
+.back-arrow:hover {
+    background: var(--neon-pink);
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+    transform: translateX(-50%) scale(1.1);
+}
+
+.back-arrow:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* ------------------ Responsive ------------------ */
+
+/* شاشات الموبايل */
+@media (max-width: 768px) {
+    .login-container {
+        position: relative;
+        right: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+    
+    .form-wrapper {
+        width: 340px;
+    }
+    
+    .form-wrapper.expanded {
+        width: 350px;
+    }
+}
+
+/* شاشات صغيرة جداً */
+@media (max-width: 480px) {
+    .form-wrapper {
+        width: 300px;
+    }
+    
+    .form-wrapper.expanded {
+        width: 310px;
+        height: 450px;
+    }
+}

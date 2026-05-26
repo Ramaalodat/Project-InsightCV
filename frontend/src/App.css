@@ -1,0 +1,72 @@
+.App {
+  min-height: 100%;
+  position: relative;
+  background-color: #0A0A1F;
+  overflow-x: hidden;
+}
+
+/* Particles background */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #FFD700;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Cursor glow effect */
+.cursor-glow {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 217, 0, 0.619) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  mix-blend-mode: screen;
+}
+
+/* Dark mode styles */
+.App.dark {
+  background-color: #0A0A1F;
+}
+
+.App.light {
+  background-color: #1A1A3E;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cursor-glow {
+    display: none;
+  }
+  
+  .particles-container {
+    display: none;
+  }
+}

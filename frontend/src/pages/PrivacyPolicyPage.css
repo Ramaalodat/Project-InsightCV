@@ -1,0 +1,470 @@
+.privacy-policy-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Effects */
+.privacy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.privacy-orb-1,
+.privacy-orb-2,
+.privacy-orb-3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: float 20s ease-in-out infinite;
+}
+
+.privacy-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #667eea 0%, transparent 70%);
+  top: 10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.privacy-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+  top: 50%;
+  right: -10%;
+  animation-delay: 7s;
+}
+
+.privacy-orb-3 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #f093fb 0%, transparent 70%);
+  bottom: 10%;
+  left: 50%;
+  animation-delay: 14s;
+}
+
+/* Particles */
+.privacy-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.privacy-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Content */
+.privacy-content {
+  position: relative;
+  z-index: 1;
+  padding: 140px 20px 80px;
+}
+
+.privacy-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.privacy-header {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 60px 40px;
+  background: rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #ffd700 50%, #f093fb 100%);
+}
+
+.shield-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.shield-icon svg {
+  color: white;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.privacy-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ff9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.privacy-date {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.privacy-intro {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-intro strong {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+/* Sections */
+.privacy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.privacy-section {
+  background: rgba(26, 26, 46, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.privacy-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd700, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.privacy-section:hover::before {
+  opacity: 1;
+}
+
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 149, 0, 0.2) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 18px;
+  margin-bottom: 20px;
+  color: #ffd700;
+  transition: all 0.3s ease;
+}
+
+.privacy-section:hover .section-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-item {
+  padding-left: 24px;
+  border-left: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.content-subtitle {
+  display: block;
+  color: #ffd700;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.content-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.section-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 10px;
+}
+
+.note-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.section-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 10px;
+}
+
+.contact-info svg {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.contact-info a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffd700;
+}
+
+/* Footer CTA */
+.privacy-footer-cta {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-footer-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  animation: rotate 15s linear infinite;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.6);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .privacy-content {
+    padding: 120px 15px 60px;
+  }
+
+  .privacy-header {
+    padding: 40px 24px;
+    margin-bottom: 50px;
+  }
+
+  .shield-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .shield-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .privacy-title {
+    font-size: 2rem;
+  }
+
+  .privacy-intro {
+    font-size: 1rem;
+  }
+
+  .privacy-section {
+    padding: 30px 24px;
+  }
+
+  .section-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .content-text {
+    font-size: 0.95rem;
+  }
+
+  .privacy-footer-cta {
+    padding: 40px 24px;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
