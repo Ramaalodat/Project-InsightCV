@@ -1,173 +1,279 @@
-# 🚀 InsightCV - AI-Powered Career & Recruitment Platform
-
 <div align="center">
 
-![InsightCV Banner](https://img.shields.io/badge/InsightCV-AI%20Career%20Platform-6C5CE7?style=for-the-badge&logo=rocket)
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Express/Native-339933?style=for-the-badge&logo=nodedotjs)
-![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+  <br />
 
-**Connecting Top Talent with Leading Companies through Cutting-Edge AI**
+  <img src="https://img.shields.io/badge/InsightCV-AI%20Career%20%26%20Recruitment-6C5CE7?style=for-the-badge&logo=rocket&logoColor=white" alt="InsightCV Header Banner" width="400" />
 
-[Features](#-key-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start--installation) • [API Architecture](#-api-architecture) • [License](#-license)
+  <h1>✨ InsightCV — AI-Powered Career & Recruitment Ecosystem</h1>
+
+  <p>
+    <b>The next-generation recruitment intelligence platform connecting top talent with industry leaders.</b>
+    <br />
+    Leveraging advanced AI CV parsing, real-time voice & text mock interviews, automated match scoring, and career path analytics.
+  </p>
+
+  <p>
+    <a href="#-key-features">Key Features</a> •
+    <a href="#-tech-stack">Tech Stack</a> •
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-api-architecture">API Reference</a> •
+    <a href="#-screenshots--demo">UI Overview</a> •
+    <a href="#-license">License</a>
+  </p>
+
+  <!-- Badges -->
+  <p>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 18" /></a>
+    <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v18.x-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
+    <a href="https://laravel.com/"><img src="https://img.shields.io/badge/Laravel-12.0-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel 12" /></a>
+    <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express-REST%20API-000000?style=flat-square&logo=express&logoColor=white" alt="Express" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License MIT" /></a>
+    <a href="https://github.com/Ramaalodat/Project-InsightCV/stargazers"><img src="https://img.shields.io/github/stars/Ramaalodat/Project-InsightCV?style=flat-square&color=gold" alt="Stars" /></a>
+  </p>
+
+  <br />
 
 </div>
 
 ---
 
-## 📖 About InsightCV
+## 💡 Overview
 
-**InsightCV** is an intelligent, full-stack career development and recruitment platform engineered to revolutionize job searching and candidate hiring. By combining smart CV parsing, interactive AI mock interviews (via text and voice), skill gap analysis, and real-time candidate-job matching algorithms, InsightCV provides an end-to-end ecosystem for both job seekers and hiring companies.
+> **InsightCV** bridges the gap between candidates searching for their dream careers and companies seeking perfect-fit talent. Powered by AI algorithms, InsightCV provides deep resume diagnostics, interactive voice/text interview coaching, dynamic candidate-job match percentages, and real-time candidate management.
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎯 For Job Seekers</h3>
+      <ul>
+        <li>📄 <b>AI CV Scanner:</b> Instant feedback, keyword optimization & scoring.</li>
+        <li>🎤 <b>Interactive AI Interviews:</b> Voice & text technical practice with live feedback.</li>
+        <li>📈 <b>Skill Gap Analyzer:</b> Personalized learning roadmaps to land targeted positions.</li>
+        <li>🏆 <b>Gamified Achievements:</b> Earn badges & track readiness scores over time.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏢 For Employers & Recruiters</h3>
+      <ul>
+        <li>🎯 <b>Smart Candidate Matching:</b> AI-calculated match percentage per applicant.</li>
+        <li>📝 <b>Job Management Hub:</b> Create, target, and monitor job listings seamlessly.</li>
+        <li>🔍 <b>Talent Discovery:</b> Advanced multi-criteria search and filter across candidates.</li>
+        <li>📊 <b>Applicant Tracking (ATS):</b> Monitor stage-by-stage candidate progression.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## ✨ Key Features
+## 🔥 Key Features
 
-### 👤 For Job Seekers (Candidates)
-- 📄 **Smart CV Analysis**: Upload CVs in PDF or text formats to receive instant AI feedback, keyword extraction, and score optimization.
-- 🎤 **AI Mock Interviews (Text & Voice)**: Practice real-world technical and soft skill interview questions with dynamic feedback and voice transcription capability.
-- 📊 **Skill Gap & Career Guidance**: Identify missing skills required for target job roles and receive personalized learning recommendations.
-- 💼 **Job Discovery & Direct Application**: Browse openings, check AI-calculated candidate-job match scores, and track application status.
-- 🏆 **Gamified Progress Tracking**: Earn points, unlock achievement badges, and keep record of interview performance over time.
+### 🧠 1. Smart Resume Parsing & CV Insights
+- Upload CVs (PDF / Word / Plain Text).
+- Automated AI extraction of skills, experience, education, and soft skills.
+- Actionable suggestions to pass Applicant Tracking Systems (ATS).
 
-### 🏢 For Employers & Companies
-- 📝 **Job Posting & Management**: Create, edit, and publish job listings with tailored requirements and skill tags.
-- 🎯 **AI Candidate Matching**: Automatically calculate match percentages between job requirements and applicant CV profiles.
-- 🔍 **Candidate Search & Filter**: Filter candidates by skill sets, experience, and position fit.
-- 📥 **Applicant Tracking**: View submitted CVs, monitor interview readiness, and track candidate progression.
-- ⭐ **Feedback & Platform Reviews**: Submit reviews and ratings to help continuously improve matching accuracy.
+### 🎤 2. AI Voice & Text Mock Interviews
+- Real-time AI interviewer questions tailored to target job roles.
+- Supports speech-to-text voice responses and written submissions.
+- Comprehensive performance reports analyzing response clarity, key concepts covered, and areas for improvement.
+
+### ⚡ 3. Automated Match Scoring & Job Discovery
+- Proprietary matching engine evaluating candidate skill profiles against job requirements.
+- Match scores displayed transparently for both candidates and hiring managers.
+- One-click application process with live status tracking.
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend
-- **Framework**: React 18.2.0
-- **Routing**: React Router DOM v6
-- **UI & Animations**: Framer Motion, Lucide React Icons
-- **HTTP Client**: Native Fetch API / Axios
-
-### Backend
-- **Core API Server**: Node.js HTTP Server (`server.js`) with structured RESTful routes
-- **Alternative Framework**: Laravel 12 (PHP 8.2+) with Eloquent ORM & Migrations
-- **Database**: SQLite / MySQL support
-- **State & Storage**: In-memory data store with disk persistence support for uploaded CV files
+<table>
+  <tr>
+    <th align="left">Layer</th>
+    <th align="left">Technologies & Libraries</th>
+  </tr>
+  <tr>
+    <td><b>Frontend</b></td>
+    <td>
+      <code>React 18.2</code> • <code>React Router DOM v6</code> • <code>Framer Motion</code> • <code>Lucide Icons</code> • <code>Axios / Fetch API</code>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Backend</b></td>
+    <td>
+      <code>Node.js Server (`server.js`)</code> • <code>Express / Native HTTP</code> • <code>Laravel 12 (PHP 8.2+)</code> • <code>Eloquent ORM</code>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Database & Storage</b></td>
+    <td>
+      <code>SQLite</code> • <code>MySQL</code> • <code>File System Storage (CV Uploads)</code>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Dev Tools</b></td>
+    <td>
+      <code>Git</code> • <code>npm</code> • <code>Composer</code> • <code>Postman</code>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Architecture
 
-```
+```gdb
 InsightCV/
-├── backend/                  # API Backend Service
-│   ├── app/                 # Laravel Controllers, Models, & Middleware
-│   ├── config/              # Server configuration
-│   ├── database/            # Migrations & Seeds
-│   ├── routes/              # Route definitions
-│   ├── server.js            # Lightweight Node.js API server
-│   ├── package.json         # Node.js backend dependencies
-│   └── composer.json        # Laravel PHP dependencies
-│
-├── frontend/                 # React Frontend Application
-│   ├── public/              # Static HTML & assets
-│   ├── src/                 # Application Source Code
-│   │   ├── components/      # Reusable UI components
-│   │   ├── pages/           # Application views/routes
-│   │   ├── services/        # API communication Layer
-│   │   └── utils/           # Helper scripts & formatting
-│   └── package.json         # Frontend dependencies & scripts
-│
-├── LICENSE                   # Open source license details
-└── README.md                 # Project documentation
+ ├── 📂 backend/                  # API Core & Business Logic
+ │    ├── 📂 app/                 # Laravel Controllers, Models & Middleware
+ │    ├── 📂 config/              # Environment & application configurations
+ │    ├── 📂 database/            # Database migrations, seeders & SQLite schemas
+ │    ├── 📂 routes/              # API endpoints and route dispatchers
+ │    ├── 📄 server.js            # Standalone, lightweight Node.js API server
+ │    ├── 📄 package.json         # Node.js backend manifest & dependencies
+ │    └── 📄 composer.json        # PHP Laravel manifest & packages
+ │
+ ├── 📂 frontend/                 # High-Performance React Web App
+ │    ├── 📂 public/              # Web assets, icons, and static templates
+ │    ├── 📂 src/                 # React UI Source Code
+ │    │    ├── 📂 components/      # Reusable UI components & design system
+ │    │    ├── 📂 pages/           # Application route pages & views
+ │    │    ├── 📂 services/        # API client modules & HTTP handlers
+ │    │    └── 📂 utils/           # Formatting helpers & utility functions
+ │    └── 📄 package.json         # Frontend web application manifest
+ │
+ ├── 📄 LICENSE                   # Open-Source MIT License
+ └── 📄 README.md                 # Complete System Documentation
 ```
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚀 Quick Start
 
-### Prerequisites
-- **Node.js**: `v16.x` or higher
-- **npm**: `v8.x` or higher
-- **PHP** (Optional, for Laravel backend): `8.2+`
-- **Composer** (Optional, for PHP dependencies)
+### 📋 Prerequisites
+
+Ensure you have the following installed on your machine:
+* **Node.js**: `v18.x` or later ([Download Node.js](https://nodejs.org/))
+* **npm**: `v9.x` or later
+* **PHP** *(Optional - for Laravel backend)*: `v8.2+`
+* **Composer** *(Optional - for PHP packages)*: `v2.x+`
 
 ---
 
-### Step 1: Clone the Repository
+### 📥 1. Clone & Setup
+
 ```bash
+# Clone repository
 git clone https://github.com/Ramaalodat/Project-InsightCV.git
+
+# Navigate to project directory
 cd Project-InsightCV
 ```
 
 ---
 
-### Step 2: Start Backend Server
+### ⚙️ 2. Start Backend Service
+
+#### Option A: Lightweight Node.js Server *(Recommended for quick testing)*
 
 ```bash
-# Navigate to backend directory
+# Navigate to backend folder
 cd backend
 
-# Install dependencies (if needed)
+# Install dependencies
 npm install
 
-# Start the Node API server (Runs on http://localhost:8000)
+# Start Node API Server (Runs on http://localhost:8000)
 node server.js
 ```
 
-*For Laravel Backend (Alternative):*
+#### Option B: Full Laravel Backend
+
 ```bash
+cd backend
+
+# Install PHP dependencies
 composer install
+
+# Environment setup
 cp .env.example .env
 php artisan key:generate
+
+# Database Setup & Migrations
 php artisan migrate
+
+# Start Laravel Server (Runs on http://localhost:8000)
 php artisan serve
 ```
 
 ---
 
-### Step 3: Start Frontend Application
+### 💻 3. Start Frontend Web Client
 
-Open a new terminal window:
+In a **new terminal window**:
 
 ```bash
-# Navigate to frontend directory from project root
+# Navigate to frontend folder from root
 cd frontend
 
-# Install dependencies
+# Install Node dependencies
 npm install
 
-# Launch the React dev server (Runs on http://localhost:3000)
+# Launch React Development Server (Runs on http://localhost:3000)
 npm start
 ```
 
----
-
-## 🔌 API Architecture
-
-The server exposes key REST API endpoints for user authentication, job management, candidate processing, and AI mock interviews:
-
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/api/register` | Register a new user (`candidate` or `company`) |
-| `POST` | `/api/login` | Authenticate user and receive access token |
-| `GET` | `/api/jobs` | Retrieve all job listings |
-| `POST` | `/api/jobs` | Post a new job (Company account required) |
-| `POST` | `/api/upload-cv` | Upload candidate CV document for processing |
-| `GET` | `/api/candidates` | Fetch candidate listings for company matching |
-| `POST` | `/api/interview/start` | Initialize an AI mock interview session |
-| `POST` | `/api/ratings` | Submit user feedback and ratings |
+🎉 **InsightCV is now running!** Open your browser and navigate to `http://localhost:3000`.
 
 ---
 
-## 🛡️ License
+## 🔌 API Reference & Endpoints
 
-Distributed under the **MIT License**. See [`LICENSE`](file:///e:/New%20folder%20%2830%29/Project-InsightCV/LICENSE) for more details.
+| HTTP Verb | Endpoint | Authentication | Description |
+| :---: | :--- | :---: | :--- |
+| `POST` | `/api/register` | None | Register a new user (`candidate` or `company`) |
+| `POST` | `/api/login` | None | Authenticate user & issue access session token |
+| `GET` | `/api/jobs` | Public | Retrieve active job listings |
+| `POST` | `/api/jobs` | Employer | Publish a new job vacancy listing |
+| `POST` | `/api/upload-cv` | Candidate | Upload CV document for AI processing & analysis |
+| `GET` | `/api/candidates` | Employer | Fetch candidate list & calculate matching fit |
+| `POST` | `/api/interview/start` | Candidate | Initialize interactive AI mock interview |
+| `POST` | `/api/ratings` | Authenticated | Submit platform feedback and rating score |
+
+---
+
+## 🎨 Design & User Experience Highlights
+
+- 💎 **Modern Dark & Light Themes**: Beautiful glassmorphism aesthetic with responsive layouts.
+- ⚡ **Micro-Interactions**: Powered by Framer Motion for ultra-smooth UI transitions.
+- 📱 **Mobile First**: Fully responsive across mobile, tablet, and desktop viewports.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to improve InsightCV:
+
+1. Fork the Project (`https://github.com/Ramaalodat/Project-InsightCV/fork`)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for complete details.
 
 ---
 
 <div align="center">
 
-Crafted with ❤️ by **Rama Alodat** & team for **InsightCV**.
+  <sub>Built with ❤️ by <b>Rama Alodat</b> and the InsightCV Engineering Team.</sub>
+
+  <br /><br />
+
+  <a href="#-insightcv--ai-powered-career--recruitment-ecosystem">⬆ Back to Top</a>
 
 </div>
